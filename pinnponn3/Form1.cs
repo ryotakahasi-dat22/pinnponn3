@@ -118,8 +118,8 @@ namespace pinnponn3
             }
 
             if ((EN.Left < Tama.Right)
-                && (PR.Bottom >= Tama.Top)
-                && (PR.Top < Tama.Bottom))
+                && (EN.Bottom >= Tama.Top)
+                && (EN.Top < Tama.Bottom))
             {
                 vvx = -vvx;
                 vvy = -vvy;
@@ -130,7 +130,9 @@ namespace pinnponn3
                 tekiCount++;
                 rightLabel.Text = $"{tekiCount:0}";
                 Tama.Left = ClientSize.Width / 2;
+                //Tama.Left = 360;
                 Tama.Top = ClientSize.Height / 2;
+                //Tama.Top = 196;
                 vvx = -vvx;
                 vvy = -vvy;
                 if (tekiCount >= 2)
