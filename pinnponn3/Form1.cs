@@ -15,7 +15,7 @@ namespace pinnponn3
     {
         const bool isDebug = true;
 
-        const int SpeedMax = 10;
+        const int SpeedMax = 20;
         int vx = 10;
         int vvx = 10;
         int vvy = 10;
@@ -183,8 +183,10 @@ namespace pinnponn3
                     copyrightLabel.Visible = false;
                     startButton.Visible = false;
 
-                    vvx = rand.Next(-SpeedMax, SpeedMax + 1);
-                    vvy = rand.Next(-SpeedMax, SpeedMax + 1);
+                    double th = 2.0 * Math.PI * rand.NextDouble();
+
+                    vvx = (int)(SpeedMax * Math.Cos(th));
+                    vvy = (int)(SpeedMax * Math.Sin(th));
                     Tama.Visible = true;
 
                     time = StartTime + 1;
